@@ -1,0 +1,1 @@
+{"version":3,"sources":["resets.scss"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,cAAc;EACd,8BAA8B;EAC9B,eAAe,EAAA","file":"resets.css","sourcesContent":["body {\n  margin: 0;\n  padding: 100px;\n  font-family: Arial, sans-serif;\n  font-size: 30px;\n}\n"]}
