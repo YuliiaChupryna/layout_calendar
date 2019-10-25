@@ -1,0 +1,45 @@
+@import "variables";
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 7*$day_width+7*$day_gap;
+
+  & div {
+    @include w-h($day_width, $day_width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px 1px 0 0;
+    background-color: #eee;
+    border: 1px solid black;
+    box-sizing: border-box;
+    visibility: hidden;
+
+    &:hover {
+      background-color: #febfcf;
+      cursor: pointer;
+      transform: translate(0, -20px);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+@each $day, $distance in $days {
+  .calendar-#{$day} div:first-child {
+    margin-left: #{$distance};
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@each $day in $days_amount {
+  .calendar-#{$day} > div:nth-child(-n+#{$day}) {
+    visibility: visible;
+  }
+}

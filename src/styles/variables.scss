@@ -1,0 +1,18 @@
+$day_width: 100px;
+$day_gap: 1px;
+
+$days:
+  mon 0*$day_width + 0*$day_gap,
+  tue 1*$day_width + 1*$day_gap,
+  wed 2*$day_width + 2*$day_gap,
+  thu 3*$day_width + 3*$day_gap,
+  fri 4*$day_width + 4*$day_gap,
+  sat 5*$day_width + 5*$day_gap,
+  sun 6*$day_width + 6*$day_gap;
+
+$days_amount: 28, 29, 30, 31;
+
+@mixin w-h($width, $height) {
+  width: $width;
+  height: $height;
+}
